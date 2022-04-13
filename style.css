@@ -27,3 +27,39 @@ h2 {
     align-items: center;
 }
 
+#form {
+    margin-left: calc(50vw - 75px);
+    margin-top: calc();
+    height: 160px;
+    display: flex;
+    position: fixed;
+    z-index: 9;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+    background-color: rgb(72, 63, 73);
+}
+
+#textInput {
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+}
+
+legend {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+.close {
+    color: red;
+    margin-left: 170px;
+    background-color: rgba(240, 248, 255, 0);
+    border: 0px;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 20px;
+}
