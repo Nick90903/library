@@ -3,8 +3,23 @@ let myLibrary = [];
 
 const container = document.querySelector('.container');
 
+// New book Elements
+const popUp = document.querySelector('#form');
+const newBookBtn = document.querySelector('.newBook');
+// Pulls up New Book form
+newBookBtn.addEventListener('click', () => popUp.style.display = 'flex');
+// Closes New Book form
+const closeForm = document.querySelector('.close');
+closeForm.addEventListener('click', () => popUp.style.display = 'none');
+
+const submit = document.qs
+
+
 // Base for books
 function Book(title, author, pages, read) {
+    title != '' ? '':alert('Title Can Not Be Blank');
+    author != '' ? '':alert('Author Can Nat Be Blank');
+    pages > 0 ? '':alert('Pages Must Be A Positive Integer')
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -15,8 +30,11 @@ function Book(title, author, pages, read) {
 }
 
 // Edit to use form!!!!!!!!!!!!!!!
-function addBookToLibrary(title, author, pages, read){
-    myLibrary.push(new Book(title, author, pages, read));
+function addBookToLibrary(){
+    myLibrary.push(new Book(form.title.value,
+                            form.author.value,
+                            form.pages.value,
+                            form.read.value));
 }
 
 
@@ -134,11 +152,5 @@ function removeAll() {
         box.remove();
     })
 }
-
-// Temp Book Data
-addBookToLibrary('title1', 'author1', 450, false);
-addBookToLibrary('title2', 'author2', 455, true);
-
-listBooks();
 
 console.table(myLibrary);
