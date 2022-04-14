@@ -77,7 +77,7 @@ label {
     padding-bottom: 15px;
 }
 
-button {
+.buttonContainer > button {
     border-radius: 15px;
     height: 30px;
     color: white;
