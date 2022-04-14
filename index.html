@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-
+    <div class="buttonContainer">
+        <button class="newBook">New Book</button>
+        <button class="removeAll" onclick="removeAll()">Remove All</button>
     </div>
-    <button class="newBook">New Book</button>   
-    <button class="removeAll" onclick="removeAll()">Remove All</button>
-
     <form id="form" action="/constructors.js">
         <button type="button" class="close">X</button>
         <legend>New Book</legend>
@@ -27,6 +25,12 @@
         </div>
         <button type="button" form="form" id="addBtn">Add</button>
     </form>
+    <div class="container">
+
+    </div>
+
+
+    
 
     <script src="./constructors.js"></script>
 </body>

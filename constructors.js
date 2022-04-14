@@ -5,21 +5,23 @@ const container = document.querySelector('.container');
 
 // New book Elements
 const popUp = document.querySelector('#form');
+popUp.style.display = 'none';
 const newBookBtn = document.querySelector('.newBook');
 // Pulls up New Book form
 newBookBtn.addEventListener('click', () => popUp.style.display = 'flex');
 // Closes New Book form
 const closeForm = document.querySelector('.close');
-closeForm.addEventListener('click', () => popUp.style.display = 'none');
+closeForm.addEventListener('click', () => popUp.style.display = 'none', form.reset());
 
-const submit = document.qs
+const submit = document.querySelector('#addBtn');
+submit.addEventListener('click', () => addBookToLibrary() );
 
 
 // Base for books
 function Book(title, author, pages, read) {
-    title != '' ? '':alert('Title Can Not Be Blank');
-    author != '' ? '':alert('Author Can Nat Be Blank');
-    pages > 0 ? '':alert('Pages Must Be A Positive Integer')
+    if(title == ''){alert('Title Can Not Be Blank'); return;}
+    if(author == ''){alert('Author Can Nat Be Blank'); return;}
+    if(pages <= 0) {alert('Pages Must Be A Positive Integer'); return;}
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -35,6 +37,9 @@ function addBookToLibrary(){
                             form.author.value,
                             form.pages.value,
                             form.read.value));
+    popUp.style.display = 'none';
+    form.reset();
+    listBooks();
 }
 
 
