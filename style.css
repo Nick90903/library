@@ -76,3 +76,12 @@ label {
     background-color: rgb(80, 77, 77);
     padding-bottom: 15px;
 }
+
+button {
+    border-radius: 15px;
+    height: 30px;
+    color: white;
+    background-color: #1992d4;
+    border: 0px;
+    width: 100px;
+}
